@@ -12,8 +12,17 @@
     padding-bottom: 520px;
 }
 .section2{
-    background-color: khaki;
     font-family: 'Merriweather', serif;
     padding-top: 35px;
-    padding-bottom: 40px;
+    padding-bottom: 35px;
+}
+.section2,img{
+    float: right;
+}
+.section4{
+    font-family: 'Merriweather', serif;
+    height: 500px;
+    padding-top: 35px;
+    padding-bottom: 60px;
+    /* background-color: khaki; */
 }
