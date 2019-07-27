@@ -1,41 +1,19 @@
-body{
+
+.section1{
     background-image: url(../img/pizza-1094741_960_720.jpg);
     background-size: cover;
-    background-attachment: fixed;
-}
-h1{
+    background-position: center;
+    background-repeat: no-repeat;
     text-align: center;
     font-family: 'Ropa Sans', sans-serif;
     font-family: 'Permanent Marker', cursive;
     color: khaki;
-    margin-top: 100px;
+    padding-top: 35px;
+    padding-bottom: 520px;
 }
-h4{
-    text-align: center;
-    color: khaki;
-}
-p{
-    text-align: center;
-}
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: transparent;
-} 
-li {
-    float: right;
-} 
-li a {
-    display: block;
-    color: tomato;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-  
-  /* Change the link color to #111 (black) on hover */
-li a:hover {
-    background-color: #111;
+.section2{
+    background-color: khaki;
+    font-family: 'Merriweather', serif;
+    padding-top: 35px;
+    padding-bottom: 40px;
 }
