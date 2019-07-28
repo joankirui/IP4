@@ -4,4 +4,8 @@ function order(size,crust,toppings,total){
     this.pizzaToppings = toppings;
     this.total = total;
 }
-$(document).ready(function()
+$(document).ready(function(){
+    $("button#order").click(function(){
+        var pizza = $(#size)
+    }
+}

@@ -14,7 +14,7 @@
     <script src="js/scripts.js"></script>
 </head>
 <body>
-    <div class="container-fluid">
+    <div class="container">
         <div class="section1">
             <br><br><h1>Welcome to Pizza Expresso</h1>
             <h4>where taste meets quality</h4>
@@ -31,43 +31,110 @@
             </div>
         </div><br><br><br>
         <div class="section3">
-            <div class="text-center">
-                <br><br><h1>Our Menu</h1>
-                <form>
-                    <label for="size">Pizza Size</label><br>
-                    <input type="checkbox" name="size1" value="400">Small<br>
-                    <input type="checkbox" name="size2" value="600">Medium<br>
-                    <input type="checkbox" name="size3" value="800">Large<br><br>
 
-                    <label for="crust">Pizza Crust</label><br>
-                    <input type="radio" name="crust" value="100">Crispy<br>
-                    <input type="radio" name="crust" value="200">Stuffed<br>
-                    <input type="radio" name="crust" value="300">Glutten-free<br><br>
 
-                    <label for="toppings">Pizza Toppings</label><br>
-                    <label for="Pepperoni">Pepperoni</label><br>
-                    <input type="checkbox" name="pepperoni1" value="150">Small<br>
-                    <input type="checkbox" name="pepperoni2" value="250">Medium<br>
-                    <input type="checkbox" name="pepperoni3" value="350">Large<br><br>
+<!-- ORDER form -->
 
-                    <label for="Mushroom">Mushroom</label><br>
-                    <input type="checkbox" name="Mushroom1" value="140">Small<br>
-                    <input type="checkbox" name="Mushroom2" value="240">Medium<br>
-                    <input type="checkbox" name="Mushroom3" value="340">Large<br><br>
+<div id="" class="">
+    <form onsubmit="return totalprice()" method="post" class="border border-light p-5 form-group" name="orderform1" id="orderform1">
+      <h5 class="h4 mb-4 text-center underline">
+        <strong>PIZZA EXPRESSO ORDER FORM</strong>
+      </h5>
+      <label for="fname"><strong>FIRST NAME:</strong></label>
+      <input type="text" name="fname" class="form-control" placeholder="first name"><br>
 
-                    <label for="Bacon">Bacon</label><br>
-                    <input type="checkbox" name="Bacon1" value="160">Small<br>
-                    <input type="checkbox" name="Bacon2" value="260">Medium<br>
-                    <input type="checkbox" name="Bacon3" value="360">Large<br><br>
+      <label for="lname"><strong>LAST NAME:</strong></label>
+      <input type="text" name="lname" class="form-control" placeholder="last name"><br>
 
-                    <label for="Delivery">Delivery</label><br>
-                    <input type="radio" name="delivery">Yes<br>
-                    <input type="radio" name="delivery">No<br><br>
-                    <button type="order"class="btn btn-primary">Order</button><br><br>
-                    <button type="check"class="btn btn-primary">Check-out</button>
+      <label for="formEmail"><strong>E-MAIL:</strong></label>
+      <input type="email" id="formEmail" class="form-control" placeholder="Your email"> <br>
 
-                </form>
-            </div>
+
+      <label for="phone"><strong>PHONE:</strong></label>
+      <input type="tel" id="phone" class="form-control" placeholder="0700000100"> <br>
+      
+      <div>
+        <label for="sizeselect"><strong>PIZZA SIZE:</strong></label>
+        <select class="mdb-select md-form mb-4 initialized form-control" id="sizeselect" name="sizes">
+          <option value="" disabled selected>CHOOSE PIZZA SIZE</option>
+          <option value="150">SMALL - 200 KES</option>
+          <option value="250">MEDIUM - 400 KES</option>
+          <option value="450">LARGE - 800 KES</option>
+        </select>
+
+      </div>
+      
+      <div>
+        <label for="sizeselect"><strong>PIZZA CRUST:</strong></label>
+        <select class="mdb-select md-form mb-4 initialized form-control" id="crustselect" name="crust">
+          <option value="" disabled selected>CHOOSE PIZZA CRUST</option>
+          <option value="50">Crispy - 100 KES</option>
+          <option value="50">Stuffed - 150 KES</option>
+          <option value="50">Glutten-free - 200 KES</option>
+        </select>
+      </div>
+
+      <hr class="new1">
+      <p><strong>PIZZA TOPPINGS:</strong></p>
+      <div class="mb-4">
+        <div class="form-check form-control">
+
+          <input type="checkbox" class="form-check-input" id="pepperoni" name="toppings" value="100" onchange="toppingsPrice()"/>
+          <label class="form-check-label" for="pepperoni">
+            PEPPERONI - 250 KES</label>
+        </div>
+        <div class="form-check form-control">
+          <input type="checkbox" class="form-check-input" id="bacon" name="toppings" value="100" onchange="toppingsPrice()"/>
+          <label class="form-check-label" for="bbqsteak">
+            BACON - 300 KES</label>
+        </div>
+        <div class="form-check form-control">
+          <input type="checkbox" class="form-check-input" id="mushroom" name="toppings" value="100" onchange="toppingsPrice()"/>
+          <label class="form-check-label" for="koreanbbq">
+            MUSHROOM - 350 KES</label>
+        </div>
+       
+
+       
+        <p><strong>Total:</strong> <input type="number" size="2" name="total" value="" class="form-control" id="total"/></p>
+      </div>
+
+   
+
+      <div>
+        <label for="quantity"><strong>QUANTITY:</strong></label>
+        <input type="number" id="quantity" class="form-control mb-4" placeholder="enter quantity of Pizza" name="quantity">
+      </div>
+
+      <hr class="new1">
+
+        <label for="delivery"> <strong>DO YOU NEED DELIVERY?</strong></label> <br>
+        <input type="radio" id="delivery" value="50" class="mb-4 form" name="delivery" checked> Yes (50 KES)<br>
+        <input type="radio" id="delivery" value="0" name="delivery" class="mb-4"> No <br>
+      <div class="deladdress mb-4">
+        <p>Your order will be delivered to your location.</p>
+        <label for="address"><strong>DELIVERY ADDRESS: </strong></label>
+        <textarea class="form-control" id="address" placeholder=""></textarea>
+      </div>
+     
+
+      <div class="">
+        <label for="comment"><strong>COMMENT</strong></label>
+        <textarea type="text" id="comment" class="form-control" rows="1" placeholder="extra order comment"></textarea>
+
+      </div>
+
+      <button class="btn-lg btn-outline-danger btn-rounded btn-block z-depth-0 my-4 waves-effect" type="submit">SUBMIT ORDER</button>
+      <button type="submit" class="btn-lg btn-outline-danger btn-rounded btn-block z-depth-0 my-4 waves-effect btn cancel" onclick="closeForm()">Close</button>
+
+    </form>
+  </div>
+  </div>
+
+</div>
+
+<!-- END ORDER FORM -->
+
         </div>
         <div class="section4">
             <div class="text-center">
