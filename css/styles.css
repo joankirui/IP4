@@ -28,10 +28,10 @@
     /* background-color: khaki; */
     color: brown;
 }
-/*h1,label{
-    /* text-decoration: underline; */
+h1,label{
+    text-decoration: underline;
 }
 .section3{
     font-size: 130%;
     color: brown;
-} */
+}
