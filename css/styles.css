@@ -20,7 +20,7 @@
  .section2,img{
     float: right;
 }
-/*.section4{
+.section4{
     font-family: 'Merriweather', serif;
     height: 500px;
     padding-top: 35px;
@@ -28,7 +28,7 @@
     /* background-color: khaki; */
     color: brown;
 }
-h1,label{
+/*h1,label{
     /* text-decoration: underline; */
 }
 .section3{
