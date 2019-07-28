@@ -18,36 +18,36 @@ $("input[name='delivery']").on("click", function(){
         }
 
 
-//     function totalprice(form){
-//     var size = parseInt(document.forms["orderform"]["sizes"].value);
-//     if (size == "") {
-//        alert("size must be filled out");
-//        return false;
-//      }
-//     var crust = parseInt(document.forms["orderform"]["crust"].value);
-//     if (crust == "") {
-//        alert("Crust must be filled out");
-//        return false;
-//      }
-//     var toppings =   parseInt(document.getElementById("total").value);
-//     if (toppings == "") {
-//        alert("Toppings must be filled out");
-//        return false;
-//      }
-//     var quantity = parseInt(document.forms["orderform"]["quantity"].value);
-//     if (quantity == "") {
-//        alert("Quantity must be filled out");
-//        return false;
-//      }
-//     var deliver = parseInt(document.querySelector('input[name="delivery"]:checked').value);
-//     // if (deliver == "") {
-//     //     alert("Delivery option must be  selected")();
-//     //     return false;
-//     //   }
-//      var result = price(size,crust,toppings,quantity, deliver);
-//     //  document.getElementById("output").innerHTML = result;
-//      alert(result);
-//     }
+    function totalprice(form){
+    var size = parseInt(document.forms["orderform"]["sizes"].value);
+    if (size == "") {
+       alert("size must be filled out");
+       return false;
+     }
+    var crust = parseInt(document.forms["orderform"]["crust"].value);
+    if (crust == "") {
+       alert("Crust must be filled out");
+       return false;
+     }
+    var toppings =   parseInt(document.getElementById("total").value);
+    if (toppings == "") {
+       alert("Toppings must be filled out");
+       return false;
+     }
+    var quantity = parseInt(document.forms["orderform"]["quantity"].value);
+    if (quantity == "") {
+       alert("Quantity must be filled out");
+       return false;
+     }
+    var deliver = parseInt(document.querySelector('input[name="delivery"]:checked').value);
+    // if (deliver == "") {
+    //     alert("Delivery option must be  selected")();
+    //     return false;
+    //   }
+     var result = price(size,crust,toppings,quantity, deliver);
+    //  document.getElementById("output").innerHTML = result;
+     alert(result);
+    }
 
 
 // function order(size,crust,toppings,total){
