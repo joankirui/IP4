@@ -2,8 +2,7 @@
 #### A Pizza Ordering Website, 27/07/2019
 #### By **Joan Chelangat Kirui**
 ## Description
-This is a Pizza website where customers order different sizes of pizzas with one or more toppings,a crust of their choice and get the total charge for all their orders and they also get to choose option for delivery.
-  
+This is a Pizza website where customers order different sizes of pizzas with one or more toppings,a crust of their choice and get the total charge for all their orders and they also get to choose option for delivery.  
 ## Setup/Installation Requirements
 * Download or clone the files
 * Edit with any text or code editor
