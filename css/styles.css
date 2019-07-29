@@ -4,7 +4,6 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    text-align: center;
     font-family: 'Ropa Sans', sans-serif;
     font-family: 'Permanent Marker', cursive;
     color: khaki;
@@ -32,6 +31,9 @@
     text-decoration: underline;
 } */
 .section3{
-    font-size: 130%;
+    /* font-size: 130%; */
     color: brown;
 }
+#summary {
+    display: none;
+   }

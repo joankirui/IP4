@@ -18,6 +18,16 @@ var toppingsPrice = function checkTotal() {
 }
 
 function totalprice(form) {
+  var fname = document.forms["orderform"]["fname"].value;
+  if (fname == "") {
+    alert("First name must be filled out");
+    return false;
+  }
+  var lname = document.forms["orderform"]["lname"].value;
+  if (lname == "") {
+    alert("Last name must be filled out");
+    return false;
+  }
   var size = parseInt(document.forms["orderform"]["sizes"].value);
   if (size == "") {
     alert("size must be filled out");
@@ -46,9 +56,27 @@ function totalprice(form) {
   var result = price(size, crust, toppings, quantity, deliver);
   //  document.getElementById("output").innerHTML = result;
   alert(result);
+
+
+  var fullName = lname + (" ") + fname;
+  // var crustey = crust;
+  // var sizey = size;
+  // var top = toppings;
+  document.getElementById("custname").innerHTML = ("Name: ") + fullName;
+  document.getElementById("output").innerHTML = ("Your order Total is = ") + result + (" KES");
+  // document.getElementById("sizeof").innerHTML = ("Pizza size: ") + sizey;
+  // document.getElementById("crustType").innerHTML = (" Pizza crust: ") + crust;
+  // document.getElementById("toppingsType").innerHTML = (" Pizza toppings: ") + toppings;
+
+
+    $("body, html").animate({
+      scrollBottom: $("#summary").offset().bottom
+    }, 1000)
 }
+
+
 $(document).ready(function () {
-  $("form").submit(function () {
+  $("button#button2").click(function () {
     var name = $("input#subject").val();
     var name = $("textarea#message").val();
     var name = $("input#email").val();
@@ -60,6 +88,16 @@ $(document).ready(function () {
     }
   });
 });
+
+// $(document).ready(function () {
+//   $("button#button1").click(function(){
+//     var location = prompt("Enter location: ");
+//     {
+//       alert("your pizza will be delivered to your location " +location + " delivery fee is 200ksh");
+//     }
+
+//   });
+// });
 
 
 // function order(size,crust,toppings,total){
