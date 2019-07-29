@@ -16,8 +16,7 @@ $("input[name='delivery']").on("click", function(){
             }
             document.orderform.total.value = sum;
         }
-
-
+        
     function totalprice(form){
     var size = parseInt(document.forms["orderform"]["sizes"].value);
     if (size == "") {
